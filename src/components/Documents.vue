@@ -3,9 +3,9 @@
         <div class="container documents__inner">
             <h2 class="documents__title title-2">Документы</h2>
             <Swiper
+                :modules="[SwiperNavigation, SwiperPagination]"
                 :slides-per-view="1"
                 :loop="true"
-                :pagination="true"
                 :space-between="35"
                 :navigation="true"
                 class="documents__slider"
@@ -28,6 +28,13 @@
 
                 }"
             >
+                <SwiperSlide v-for="item in documents">
+                    <div class="documents__slider-item slider-item">
+                        <div class="slider-item__title">{{ item.title }}</div>
+                        <div class="slider-item__text">{{ item.text }}</div>
+                        <Button :variant="'primary'" @click="() => handleSliderItemClick(item.id)">Перейти</Button>
+                    </div>
+                </SwiperSlide>
                 <SwiperSlide v-for="item in documents">
                     <div class="documents__slider-item slider-item">
                         <div class="slider-item__title">{{ item.title }}</div>
