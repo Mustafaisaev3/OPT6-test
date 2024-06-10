@@ -1,0 +1,30 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    letter-spacing: 0;
+    font-family: PTSans;
+}
+
+ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.3s all;
+    color: #ffffff;
+
+    &:hover {
+        color: #e4e4e4;
+    }
+}
+
+.container {
+    max-width: 1156px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 20px;
+}
